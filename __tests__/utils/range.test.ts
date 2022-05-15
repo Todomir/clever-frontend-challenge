@@ -1,3 +1,5 @@
+import { describe, it, expect } from 'vitest';
+
 import range from '../../utils/range';
 
 describe('utils/range', () => {

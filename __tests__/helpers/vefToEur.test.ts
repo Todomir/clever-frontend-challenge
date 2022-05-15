@@ -1,3 +1,5 @@
+import { describe, expect, it } from 'vitest';
+
 import { VEF_TO_EUR_CONVERSION_RATE } from '../../constants';
 import vefToEur from '../../helpers/vefToEur';
 

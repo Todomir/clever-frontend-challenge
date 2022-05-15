@@ -1,5 +1,5 @@
-import { renderHook, act } from '@testing-library/react-hooks';
-import { describe, it, expect } from 'vitest';
+import { act, renderHook } from '@testing-library/react-hooks';
+import { describe, expect, it } from 'vitest';
 
 import usePaginate from '../../hooks/usePaginate';
 

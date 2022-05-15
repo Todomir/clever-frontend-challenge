@@ -1,0 +1,1 @@
+export const VEF_TO_EUR_CONVERSION_RATE = 7.55;

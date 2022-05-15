@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write '**/*.{js,jsx,ts,tsx}'"
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx}'",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "next": "12.1.6",

@@ -1,0 +1,37 @@
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+
+  font-size: 0.75rem;
+  line-height: 1rem;
+
+  background-color: #fef3c7;
+  color: #92400e;
+
+  border-radius: 0.25rem;
+
+  width: min-content;
+  height: min-content;
+}
+
+.badge--fallback {
+  min-height: 1.4rem;
+  min-width: 3rem;
+
+  background: rgba(130, 130, 130, 0.2);
+  animation: skeleton 1s infinite ease-in-out;
+}
+
+@keyframes skeleton {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}

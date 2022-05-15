@@ -1,0 +1,23 @@
+.skeleton {
+  width: var(--props-width);
+  height: var(--props-height);
+  border-radius: var(--props-border-radius);
+  aspect-ratio: var(--props-aspect-ratio);
+
+  background: rgba(130, 130, 130, 0.2);
+  animation: skeleton 1s infinite ease-in-out;
+}
+
+@keyframes skeleton {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}

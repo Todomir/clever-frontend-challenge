@@ -1,0 +1,98 @@
+.property-card {
+  display: flex;
+  gap: 24px;
+
+  max-width: 900px;
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+.property-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  justify-content: center;
+
+  padding: 12px 24px;
+}
+
+.property-card__image {
+  position: relative;
+  min-width: 320px;
+  min-height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.property-card__header {
+  display: flex;
+  flex-direction: column;
+}
+
+.property-card__picture {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+.property-card__header__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-block: 8px;
+}
+
+.property-card__header__subtitle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #475569;
+}
+
+.property-card__section {
+  display: flex;
+  flex-direction: column;
+}
+
+.property-card__address {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #64748b;
+}
+
+.property-card__overview {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  padding-block-start: 2em;
+  max-height: 200px;
+  overflow: auto;
+}
+
+@media screen and (max-width: 828px) {
+  .property-card {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .property-card__body {
+    padding: 12px;
+  }
+  .property-card__header__title {
+    flex-direction: column-reverse;
+    align-items: start;
+  }
+}

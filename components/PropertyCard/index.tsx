@@ -1,13 +1,9 @@
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import { Suspense } from 'react';
 
 import { Location, Property } from '../../model/property.model';
-import { Fallback as BadgeFallback } from '../atoms/Badge';
+import Badge, { Fallback as BadgeFallback } from '../atoms/Badge';
 import Skeleton from '../atoms/Skeleton';
 import styles from './style.module.css';
-
-const Badge = dynamic(() => import('../atoms/Badge'), { suspense: true });
 
 export interface PropertyCardProps {
   property: Property;
@@ -16,7 +12,11 @@ export interface PropertyCardProps {
 
 export function Fallback() {
   return (
-    <div className={styles['property-card']}>
+    <div
+      aria-busy
+      aria-live="polite"
+      className={styles['property-card']}
+      role="progressbar">
       <div className={styles['property-card__image']}>
         <Skeleton height="100%" width="100%" />
       </div>
@@ -66,9 +66,7 @@ export default function PropertyCard({
         <header className={styles['property-card__header']}>
           <div className={styles['property-card__header__title']}>
             <h2>{property.name}</h2>
-            <Suspense fallback={<BadgeFallback />}>
-              {property.isFeatured && <Badge>Featured</Badge>}
-            </Suspense>
+            <Badge>Featured</Badge>
           </div>
           <h3 className={styles['property-card__header__subtitle']}>
             {property.overallRating && (

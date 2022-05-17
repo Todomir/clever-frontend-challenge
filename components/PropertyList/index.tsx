@@ -34,6 +34,7 @@ export default function PropertyList() {
           <>
             {Array.from({ length: 10 }).map((_, index) => (
               // Using index as key is safe here because useId() always returns a unique value
+              // and the list fallback is only rendered once.
               // eslint-disable-next-line react/no-array-index-key
               <PropertyCardFallback key={`${id}--${index}`} />
             ))}
